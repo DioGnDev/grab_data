@@ -12,18 +12,18 @@ def getRequest():
 
 	pbcopy(prettyJson)
 
-def postRequest():
-	url = 'http://103.43.44.111/user/register-user'
-	params = {'key': 'value'}
+# def postRequest():
+# 	url = raw_input('insert here : ')
+# 	params = {'key': 'value'}
 
-	data = urllib.urlencode(params)
-	req = urllib2.Request(url, data)
-	response = urllib2.urlopen(req)
+# 	data = urllib.urlencode(params)
+# 	req = urllib2.Request(url, data)
+# 	response = urllib2.urlopen(req)
 	
-	jsonResponse = json.load(response)
-	jsonDump = json.dumps(jsonResponse, indent=4)
+# 	jsonResponse = json.load(response)
+# 	jsonDump = json.dumps(jsonResponse, indent=4)
 
-	print jsonDump
+# 	print jsonDump
 
 def pbcopy(data):
 	p = subprocess.Popen(['pbcopy'], stdin=subprocess.PIPE)
